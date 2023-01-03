@@ -6,16 +6,17 @@ import lombok.Setter;
 @Setter
 @Getter
 public class User {
-    private Integer id;
-    private String name;
-    private Integer old;
+//    private Integer id;
+    private String userName;
+    private String password;
+//    private Integer old;
 
-    @Override
-    public String toString(){
-        return "User{" +
-                "id=" + id +
-                ", name = " + name + '\'' +
-                ", old = " + old + '\''+
-                '}';
-    }
+//    @Override
+//    public String toString(){
+//        return "User{" +
+//                "id=" + id +
+//                ", name = " + name + '\'' +
+//                ", old = " + old + '\''+
+//                '}';
+//    }
 }

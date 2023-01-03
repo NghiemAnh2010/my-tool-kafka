@@ -1,6 +1,7 @@
 package com.example.mytoolkafka.Kafka;
 
 import com.example.mytoolkafka.payload.User;
+import com.example.mytoolkafka.payload.UserRes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,11 @@ public class JsonKafkaProducer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JsonKafkaProducer.class);
 
-    public void sendMessageJson(User data){
+    public void sendMessageJson(UserRes data, String topic){
         LOGGER.info(String.format("Message sent to topic %s",data.toString()));
-        Message<User> message = MessageBuilder
+        Message<UserRes> message = MessageBuilder
                 .withPayload(data)
-                .setHeader(KafkaHeaders.TOPIC,"topic-nbqa-json")
+                .setHeader(KafkaHeaders.TOPIC,topic)
                 .build();
         kafkaTemplate.send(message);
     }
