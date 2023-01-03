@@ -17,8 +17,8 @@ public class JsonMessageController {
     @Autowired
     private ProducerService producerService;
 
-    @PostMapping("/publish")
-    public ResponseEntity<String> publish (@RequestBody User data){
-        return producerService.jsonPublishS(data);
+    @PostMapping("/publish-login")
+    public ResponseEntity<String> publish (@RequestBody User user){
+        return producerService.publishDataLogin(user);
     }
 }

@@ -8,13 +8,13 @@ import org.springframework.kafka.config.TopicBuilder;
 @Configuration
 public class KafkaTopicConfig {
 
-    @Bean
-    public NewTopic topicNBQA () {
-        return TopicBuilder.name("topic-nbqa")
-                .partitions(5)
-                .replicas(1)
-                .build();
-    }
+//    @Bean
+//    public NewTopic topicNBQA () {
+//        return TopicBuilder.name("topic-nbqa")
+//                .partitions(5)
+//                .replicas(1)
+//                .build();
+//    }
     @Bean
     public NewTopic topicJsonNBQA() {
         return TopicBuilder.name("topic-nbqa-json")
