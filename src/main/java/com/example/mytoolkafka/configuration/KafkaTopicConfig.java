@@ -15,14 +15,21 @@ public class KafkaTopicConfig {
 //                .replicas(1)
 //                .build();
 //    }
+//    @Bean
+//    public NewTopic topicJsonNBQA() {
+//        return TopicBuilder.name("topic-nbqa-json")
+//                .partitions(5)
+//                .replicas(1)
+//                .build();
+//    }
+
     @Bean
-    public NewTopic topicJsonNBQA() {
-        return TopicBuilder.name("topic-nbqa-json")
-                .partitions(5)
+    public NewTopic topicLogin(){
+        return TopicBuilder.name("check-login")
+                .partitions(3)
                 .replicas(1)
                 .build();
     }
-
 //    @Bean
 //    public NewTopic topic3() {
 //        return TopicBuilder.name("thing3")

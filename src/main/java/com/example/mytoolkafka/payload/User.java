@@ -11,12 +11,11 @@ public class User {
     private String password;
 //    private Integer old;
 
-//    @Override
-//    public String toString(){
-//        return "User{" +
-//                "id=" + id +
-//                ", name = " + name + '\'' +
-//                ", old = " + old + '\''+
-//                '}';
-//    }
+    @Override
+    public String toString(){
+        return "User{" +
+                ", name = " + userName + '\'' +
+                ", password = " + password + '\''+
+                '}';
+    }
 }
