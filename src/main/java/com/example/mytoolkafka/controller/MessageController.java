@@ -1,6 +1,5 @@
 package com.example.mytoolkafka.controller;
 
-import com.example.mytoolkafka.payload.User;
 import com.example.mytoolkafka.service.ProducerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
