@@ -1,14 +1,10 @@
 package com.example.mytoolkafka.Kafka;
 
-import com.example.mytoolkafka.payload.User;
 import com.example.mytoolkafka.payload.UserRes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.support.KafkaHeaders;
-import org.springframework.messaging.Message;
-import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 
 @Service
