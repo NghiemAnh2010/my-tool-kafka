@@ -5,17 +5,17 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class User {
+public class UserReq {
 //    private Integer id;
     private String userName;
-    private String password;
+//    private String password;
 //    private Integer old;
 
     @Override
     public String toString(){
-        return "User{" +
+        return "UserReq{" +
                 ", name = " + userName + '\'' +
-                ", password = " + password + '\''+
+//                ", password = " + password + '\''+
                 '}';
     }
 }

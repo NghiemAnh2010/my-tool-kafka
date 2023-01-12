@@ -1,6 +1,5 @@
 package com.example.mytoolkafka.configuration;
 
-import com.example.mytoolkafka.payload.User;
 import com.example.mytoolkafka.payload.UserRes;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;

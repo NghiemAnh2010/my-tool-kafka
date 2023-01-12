@@ -1,9 +1,13 @@
 package com.example.mytoolkafka.controller;
 
+import com.example.mytoolkafka.payload.UserReq;
+import com.example.mytoolkafka.payload.UserRes;
 import com.example.mytoolkafka.service.ProducerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/kafka")
@@ -19,8 +23,12 @@ public class MessageController {
         return producerService.publishS(message);
     }
 
+    @GetMapping("/number-login")
+    public ResponseEntity<List<UserRes>> getAllNumberLoginMoreThanTwice(){
+        return producerService.getAllNumberLoginMoreThanTwice();
+    }
 //    @PostMapping("/json-publish")
-//    public ResponseEntity<User> jsonPublish(@RequestBody User user){
+//    public ResponseEntity<UserReq> jsonPublish(@RequestBody UserReq user){
 //        return producerService.jsonPublishS(user);
 //    }
 }

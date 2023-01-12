@@ -1,19 +1,22 @@
 package com.example.mytoolkafka.payload;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserRes {
-    private String userName;
-    private String password;
-
+    private String username;
+    private long numberLogin;
     @Override
     public String toString(){
-        return "User{" +
-                ", name = " + userName + '\'' +
-                ", password = " + password + '\''+
+        return "UserReq{" +
+                ", username = " + username + '\'' +
+                ", numberLogin = " + numberLogin + '\''+
                 '}';
     }
 }

@@ -1,11 +1,6 @@
 package com.example.mytoolkafka.Kafka;
 
 import com.example.mytoolkafka.logic.CheckLoginLogic;
-import com.example.mytoolkafka.payload.User;
-import com.example.mytoolkafka.payload.UserRes;
-import com.example.mytoolkafka.repository.LoginRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;

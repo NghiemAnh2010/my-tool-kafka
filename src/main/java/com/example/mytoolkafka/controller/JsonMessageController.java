@@ -1,6 +1,6 @@
 package com.example.mytoolkafka.controller;
 
-import com.example.mytoolkafka.payload.User;
+import com.example.mytoolkafka.payload.UserReq;
 import com.example.mytoolkafka.service.ProducerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ public class JsonMessageController {
     private ProducerService producerService;
 
     @PostMapping("/publish-login")
-    public ResponseEntity<String> publish (@RequestBody User user){
-        return producerService.publishDataLogin(user);
+    public ResponseEntity<String> publish (@RequestBody UserReq userReq){
+        return producerService.publishDataLogin(userReq);
     }
 }
