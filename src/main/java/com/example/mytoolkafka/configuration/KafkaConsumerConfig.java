@@ -36,9 +36,8 @@ public class KafkaConsumerConfig {
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         // Số message tối đa được trả về trong 1 lần gọi hàn poll()
-        props.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG,1000);
-        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG,true);
-
+        props.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG,3);
+        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG,false);
 
         return new DefaultKafkaConsumerFactory<>(props);
     }
